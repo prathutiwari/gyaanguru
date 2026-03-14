@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Block all web crawlers and AI scrapers from accessing the site
+# This helps prevent automated reading of the website content

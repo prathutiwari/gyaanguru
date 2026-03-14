@@ -986,3 +986,43 @@ if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
   voiceButton.style.display = 'none';
   console.log('Speech recognition not supported in this browser');
 }
+
+// Code Protection for Desktop Users
+// Detect if user is on desktop (not mobile/tablet)
+function isDesktop() {
+  return window.innerWidth > 768 && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Disable right-click context menu on desktop
+if (isDesktop()) {
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // Disable common dev tool shortcuts on desktop
+  document.addEventListener('keydown', function(e) {
+    // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+      (e.ctrlKey && e.key === 'U')
+    ) {
+      e.preventDefault();
+      alert('Developer tools are disabled for security reasons.');
+      return false;
+    }
+  });
+
+  // Additional protection: Disable drag and drop to prevent code inspection
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // Disable text selection on desktop
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+    return false;
+  });
+}
