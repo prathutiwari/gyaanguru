@@ -69,7 +69,7 @@ function isHindi(text) {
   }
 
   // Roman Hindi / Hinglish
-  return /\b(kya|kaunsa|kaunsa|kaise|kyu|kyun|kaun|tum|tumhara|tera|aap|mera|mujhe|mujhko|batao|bolo|kar|karo|raha|rahe|rahi|ho|hai|hain|use kar|chal raha|ka model | btao | bta)\b/.test(value);
+  return /\b(kya|kaunsa|kaun sa|kaise|kyu|kyun|kaun|tum|tumhara|tera|aap|mera|mujhe|mujhko|batao|bolo|kar|karo|raha|rahe|rahi|ho|hai|hain|use kar|chal raha|ka model| btao| bta)\b/.test(value);
 }
 
 const funnyModelInquiryResponsesEN = [
