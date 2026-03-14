@@ -20,6 +20,9 @@ const exportSummaryBtn = document.getElementById('exportSummaryBtn');
 const copySummaryBtn = document.getElementById('copySummaryBtn');
 const summaryModalFooter = document.querySelector('.summary-modal-footer');
 const statusIndicator = document.getElementById('statusIndicator');
+const infoBtn = document.getElementById('infoBtn');
+const infoModal = document.getElementById('infoModal');
+const closeInfoBtn = document.getElementById('closeInfoBtn');
 
 // Voice output state
 let autoVoiceOutput = localStorage.getItem('autoVoiceOutput') === 'true';
@@ -684,10 +687,20 @@ closeSummaryBtn.addEventListener('click', hideSummaryModal);
 exportSummaryBtn.addEventListener('click', exportSummary);
 copySummaryBtn.addEventListener('click', copySummary);
 
+// Info modal functionality
+infoBtn.addEventListener('click', showInfoModal);
+closeInfoBtn.addEventListener('click', hideInfoModal);
+
 // Close modal when clicking outside
 summaryModal.addEventListener('click', (e) => {
   if (e.target === summaryModal) {
     hideSummaryModal();
+  }
+});
+
+infoModal.addEventListener('click', (e) => {
+  if (e.target === infoModal) {
+    hideInfoModal();
   }
 });
 
@@ -801,6 +814,15 @@ function showChatSummary() {
 // Hide summary modal
 function hideSummaryModal() {
   summaryModal.classList.remove('active');
+}
+
+// Info modal functions
+function showInfoModal() {
+  infoModal.classList.add('active');
+}
+
+function hideInfoModal() {
+  infoModal.classList.remove('active');
 }
 
 // Export summary as text file

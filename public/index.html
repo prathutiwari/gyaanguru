@@ -56,6 +56,13 @@
             <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
           </svg>
         </button>
+        <button id="infoBtn" class="header-btn" title="App Info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -152,6 +159,68 @@
             Copy Summary
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Modal -->
+  <div class="info-modal" id="infoModal">
+    <div class="info-modal-content">
+      <div class="info-modal-header">
+        <h3>🚀 GyaanGuru Features</h3>
+        <button class="close-info-btn" id="closeInfoBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="info-modal-body">
+        <div class="feature-section">
+          <h4>🎤 Voice Input & Output</h4>
+          <ul>
+            <li>Speak instead of typing with auto-detection</li>
+            <li>Auto-send after speaking</li>
+            <li>AI voice output with text-to-speech</li>
+            <li>Auto voice mode toggle</li>
+          </ul>
+        </div>
+        <div class="feature-section">
+          <h4>💬 Chat Management</h4>
+          <ul>
+            <li>Edit last message</li>
+            <li>Chat history with export options</li>
+            <li>Chat summaries with topics and stats</li>
+            <li>Clear history and start new chats</li>
+          </ul>
+        </div>
+        <div class="feature-section">
+          <h4>🎨 UI & Themes</h4>
+          <ul>
+            <li>Light/Dark mode toggle</li>
+            <li>Responsive design for mobile and desktop</li>
+            <li>Modern gradient purple theme</li>
+            <li>Smooth animations and transitions</li>
+          </ul>
+        </div>
+        <div class="feature-section">
+          <h4>🤖 Chat Features</h4>
+          <ul>
+            <li>AI-powered responses using an advanced LLM.</li>
+            <li>Token usage tracker with response time</li>
+            <li>Session context for natural follow-ups</li>
+            <li>Typing indicator and copy message buttons</li>
+            <li>Personalized greeting and developer attribution</li>
+          </ul>
+        </div>
+        <!-- <div class="feature-section">
+          <h4>🔒 Security & Performance</h4>
+          <ul>
+            <li>Rate limiting for API protection</li>
+            <li>Offline-ready with local storage</li>
+            <li>Environment variable security</li>
+          </ul>
+        </div> -->
       </div>
     </div>
   </div>
