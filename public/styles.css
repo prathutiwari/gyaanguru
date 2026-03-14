@@ -60,7 +60,7 @@ body {
 .chat-container {
   width: 100%;
   max-width: 550px;
-  height: calc(100vh - 20px);
+  height: calc(100dvh - 20px);
   background: var(--chat-bg);
   border-radius: 20px;
   box-shadow: 0 20px 60px var(--chat-shadow);
@@ -89,6 +89,8 @@ body {
   }
 
   .chat-container {
+    position: fixed;
+    inset: 0;
     width: 100%;
     max-width: 100%;
     height: 100dvh;
@@ -119,50 +121,53 @@ body {
   }
 
   .chat-header {
-    padding: 12px 10px;
+    position: relative;
+    z-index: 5;
+    padding: 10px 8px;
     gap: 8px;
+    min-height: 68px;
   }
 
   .bot-avatar {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
     flex-shrink: 0;
   }
 
   .bot-info {
-    flex: 1;
+    flex: 0 0 auto;
     min-width: 0;
   }
 
   .bot-info h1 {
-    font-size: 15px;
-    line-height: 1.1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
 
   .status {
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .header-actions {
+    margin-left: auto;
     display: flex;
     gap: 4px;
     flex-shrink: 0;
   }
 
   .header-btn {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 8px;
     padding: 0;
+    flex-shrink: 0;
   }
 
   .header-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
   .chat-messages {
@@ -175,6 +180,8 @@ body {
   }
 
   .chat-input-container {
+    position: relative;
+    z-index: 5;
     padding: 8px;
     gap: 8px;
     align-items: center;
@@ -206,6 +213,8 @@ body {
   }
 
   .chat-footer {
+    position: relative;
+    z-index: 5;
     padding: 8px;
     font-size: 11px;
   }
