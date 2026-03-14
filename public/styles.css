@@ -784,7 +784,33 @@ body {
     width: 16px;
     height: 16px;
   }
+
+  .chat-input-container {
+    padding: 10px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  #messageInput {
+    min-height: 44px;
+    padding: 12px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .send-button,
+  .voice-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .send-button svg,
+  .voice-button svg {
+    width: 20px;
+    height: 20px;
+  }
 }
+
 
 /* Summary Modal */
 .summary-modal {
