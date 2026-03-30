@@ -183,7 +183,7 @@ function copyResponse(button) {
       checkIcon.style.display = 'none';
     }, 2000);
   }).catch(err => {
-    console.error('Failed to copy:', err);
+    // console.error('Failed to copy:', err);
   });
 }
 
@@ -393,7 +393,7 @@ async function sendMessage() {
     }
   } catch (error) {
     hideTyping();
-    console.error('Error:', error);
+    // console.error('Error:', error);
     addMessage('Connection error. Please try again.', false);
   }
 }
@@ -964,7 +964,7 @@ if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
   };
   
   recognition.onerror = (event) => {
-    console.error('Speech recognition error:', event.error);
+    // console.error('Speech recognition error:', event.error);
     isListening = false;
     voiceButton.classList.remove('listening');
     messageInput.placeholder = 'Type your message...';
@@ -984,7 +984,7 @@ if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
 } else {
   // Browser doesn't support speech recognition
   voiceButton.style.display = 'none';
-  console.log('Speech recognition not supported in this browser');
+  // console.log('Speech recognition not supported in this browser');
 }
 
 // Code Protection for Desktop Users
