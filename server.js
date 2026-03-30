@@ -159,7 +159,7 @@ async function getAIResponse(message, sessionId) {
     
     return { response, tokenInfo };
   } catch (error) {
-    console.error('Groq Error:', error?.message || error);
+    // console.error('Groq Error:', error?.message || error);
     throw error;
   }
 }
@@ -194,7 +194,7 @@ app.post('/api/chat', async (req, res) => {
       responseTime
     });
   } catch (error) {
-    console.error('Error:', error);
+    // console.error('Error:', error);
     res.json({
       response: getFallbackResponse(),
       tokenInfo: null,
