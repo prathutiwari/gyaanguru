@@ -5,6 +5,8 @@ const Groq = require('groq-sdk');
 const rateLimit = require('express-rate-limit');
 
 const app = express();
+// Vercel runs behind a proxy, so trust the forwarded headers for rate limiting and client IP.
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3000;
 
 // Initialize Groq AI (FREE!)
